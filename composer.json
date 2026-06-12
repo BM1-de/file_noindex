@@ -1,0 +1,57 @@
+{
+    "name": "bm1/file-noindex",
+    "type": "typo3-cms-extension",
+    "description": "Exclude single files/images from search engines (Google Image Search) via a dynamically generated robots.txt - toggled per file in the file list.",
+    "keywords": [
+        "TYPO3 CMS",
+        "Extension",
+        "robots.txt",
+        "noindex",
+        "SEO",
+        "FAL",
+        "Google Image Search"
+    ],
+    "homepage": "https://git.bm1.de/typo3/file_noindex",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "authors": [
+        {
+            "name": "Phillip Baumgärtner",
+            "role": "Developer",
+            "email": "baumgaertner@bm1.de",
+            "homepage": "https://bm1.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "typo3/cms-core": "^13.4 || ^14.0"
+    },
+    "require-dev": {
+        "typo3/tailor": "^1.6"
+    },
+    "replace": {
+        "typo3-ter/file-noindex": "*"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "file_noindex"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Bm1\\FileNoindex\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bm1\\FileNoindex\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true
+        }
+    }
+}
