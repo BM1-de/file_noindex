@@ -40,7 +40,7 @@ class RobotsTxtAmender
 
         if ($lastStarUserAgentIndex === null) {
             // No "*" group present: append a new group at the end
-            while ($lines !== [] && trim((string)end($lines)) === '') {
+            while ($lines !== [] && trim((string) end($lines)) === '') {
                 array_pop($lines);
             }
             if ($lines !== []) {
@@ -64,11 +64,11 @@ class RobotsTxtAmender
 
     private function isStarUserAgentLine(string $line): bool
     {
-        return (bool)preg_match('/^\s*user-agent\s*:\s*\*\s*(#.*)?$/i', $line);
+        return (bool) preg_match('/^\s*user-agent\s*:\s*\*\s*(#.*)?$/i', $line);
     }
 
     private function isUserAgentLine(string $line): bool
     {
-        return (bool)preg_match('/^\s*user-agent\s*:/i', $line);
+        return (bool) preg_match('/^\s*user-agent\s*:/i', $line);
     }
 }

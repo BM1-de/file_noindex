@@ -71,7 +71,7 @@ final class RobotsTxtMiddleware implements MiddlewareInterface
                 if (($route['route'] ?? '') === 'robots.txt'
                     && ($route['type'] ?? '') === 'staticText'
                 ) {
-                    return (string)($route['content'] ?? '');
+                    return (string) ($route['content'] ?? '');
                 }
             }
         }

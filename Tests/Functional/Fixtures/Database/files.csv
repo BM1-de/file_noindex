@@ -1,0 +1,17 @@
+"sys_file",,,,,,,,,,,,,
+,"uid","pid","storage","type","identifier","identifier_hash","folder_hash","extension","mime_type","name","sha1","size","missing"
+,1,0,1,2,"/test/photo.jpg","1111111111111111111111111111111111111111","2222222222222222222222222222222222222222","jpg","image/jpeg","photo.jpg","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",100,0
+,2,0,1,2,"/test/public.jpg","3333333333333333333333333333333333333333","2222222222222222222222222222222222222222","jpg","image/jpeg","public.jpg","bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",100,0
+,3,0,1,2,"/test/Türme über Bayreuth.jpg","4444444444444444444444444444444444444444","2222222222222222222222222222222222222222","jpg","image/jpeg","Türme über Bayreuth.jpg","cccccccccccccccccccccccccccccccccccccccc",100,0
+,4,0,1,2,"/test/missing.jpg","5555555555555555555555555555555555555555","2222222222222222222222222222222222222222","jpg","image/jpeg","missing.jpg","dddddddddddddddddddddddddddddddddddddddd",100,1
+"sys_file_metadata",,,,,,,,,,,,,
+,"uid","pid","file","sys_language_uid","l10n_parent","tx_filenoindex_noindex",,,,,,,
+,1,0,1,0,0,1,,,,,,,
+,2,0,2,0,0,0,,,,,,,
+,3,0,3,0,0,1,,,,,,,
+,4,0,4,0,0,1,,,,,,,
+"sys_file_processedfile",,,,,,,,,,,,,
+,"uid","storage","original","identifier","name","task_type","configuration","configurationsha1","originalfilesha1","checksum","width","height",
+,1,1,1,"/_processed_/1/2/csm_photo_0123456789.jpg","csm_photo_0123456789.jpg","Image.CropScaleMask","a:0:{}","eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","0123456789",200,100,
+,2,1,1,"/_processed_/1/2/csm_photo_9876543210.jpg","csm_photo_9876543210.jpg","Image.CropScaleMask","a:0:{}","ffffffffffffffffffffffffffffffffffffffff","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","9876543210",300,150,
+,3,1,1,"","photo.jpg","Image.CropScaleMask","a:0:{}","9999999999999999999999999999999999999999","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","1111111111",400,200,

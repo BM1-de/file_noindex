@@ -6,3 +6,5 @@ composer.lock
 .Build/
 .php-cs-fixer.cache
 .phpunit.result.cache
+typo3temp/
+.php-cs-fixer.php-cs-fixer.cache

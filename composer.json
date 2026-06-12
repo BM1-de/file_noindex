@@ -1,6 +1,7 @@
 {
     "name": "bm1/file-noindex",
     "type": "typo3-cms-extension",
+    "version": "0.1.0",
     "description": "Exclude single files/images from search engines (Google Image Search) via a dynamically generated robots.txt - toggled per file in the file list.",
     "keywords": [
         "TYPO3 CMS",
@@ -28,14 +29,27 @@
         "typo3/cms-core": "^13.4 || ^14.0"
     },
     "require-dev": {
-        "typo3/tailor": "^1.6"
+        "friendsofphp/php-cs-fixer": "^3.75",
+        "phpstan/phpstan": "^2.1",
+        "typo3/tailor": "^1.6",
+        "typo3/testing-framework": "^8.2 || ^9"
+    },
+    "scripts": {
+        "check:cs": "php-cs-fixer fix --dry-run --diff",
+        "check:phpstan": "phpstan analyse",
+        "fix:cs": "php-cs-fixer fix",
+        "test:functional": "phpunit -c Build/phpunit/FunctionalTests.xml",
+        "test:unit": "phpunit -c Build/phpunit/UnitTests.xml"
     },
     "replace": {
         "typo3-ter/file-noindex": "*"
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "file_noindex"
+            "extension-key": "file_noindex",
+            "Package": {
+                "providesPackages": {}
+            }
         }
     },
     "autoload": {

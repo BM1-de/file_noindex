@@ -179,7 +179,7 @@ class DisallowListBuilder
             return $this->processingFolderPathCache[$storageUid];
         }
 
-        $identifier = trim((string)($storage->getStorageRecord()['processingfolder'] ?? ''));
+        $identifier = trim((string) ($storage->getStorageRecord()['processingfolder'] ?? ''));
         if ($identifier === '') {
             $identifier = ResourceStorage::DEFAULT_ProcessingFolder;
         }
@@ -187,7 +187,7 @@ class DisallowListBuilder
         if (str_contains($identifier, ':')) {
             // "<storageUid>:<folderIdentifier>" - processing folder in another storage
             [$targetStorageUid, $identifier] = explode(':', $identifier, 2);
-            $targetStorage = $this->storageRepository->findByUid((int)$targetStorageUid);
+            $targetStorage = $this->storageRepository->findByUid((int) $targetStorageUid);
         }
 
         $path = null;
