@@ -9,13 +9,13 @@ jobs:
   qa:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.4'
           extensions: intl
           coverage: none
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.cache/composer
           key: composer-qa-${{ hashFiles('composer.json') }}
@@ -36,13 +36,13 @@ jobs:
           - { php: '8.4', typo3: '^14.0' }
     name: "tests: PHP ${{ matrix.php }} / TYPO3 ${{ matrix.typo3 }}"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '${{ matrix.php }}'
           extensions: intl
           coverage: none
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.cache/composer
           key: composer-${{ matrix.php }}-${{ matrix.typo3 }}-${{ hashFiles('composer.json') }}
