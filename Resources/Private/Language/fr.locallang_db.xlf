@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="EXT:file_noindex/Resources/Private/Language/locallang_db.xlf" product-name="file_noindex">
+		<body>
+			<trans-unit id="sys_file_metadata.tab.seo" resname="sys_file_metadata.tab.seo" approved="yes">
+				<source>SEO</source>
+				<target>SEO</target>
+			</trans-unit>
+			<trans-unit id="sys_file_metadata.tx_filenoindex_noindex" resname="sys_file_metadata.tx_filenoindex_noindex" approved="yes">
+				<source>Do not index in search engines</source>
+				<target>Ne pas indexer dans les moteurs de recherche</target>
+			</trans-unit>
+			<trans-unit id="sys_file_metadata.tx_filenoindex_noindex.description" resname="sys_file_metadata.tx_filenoindex_noindex.description" approved="yes">
+				<source>Adds the file to the robots.txt disallow list (the way officially recommended by Google). Takes effect after the next crawl - to remove already indexed images right away, additionally use Google Search Console &gt; "Removals". This is no access protection: the file stays reachable via direct link.</source>
+				<target>Ajoute le fichier à la liste d'interdiction du robots.txt (la méthode officiellement recommandée par Google). Prend effet après le prochain crawl — pour retirer immédiatement des images déjà indexées, utilisez en plus Google Search Console → « Suppressions ». Ceci n'est pas une protection d'accès : le fichier reste accessible par lien direct.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
