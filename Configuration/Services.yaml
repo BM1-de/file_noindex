@@ -6,3 +6,7 @@ services:
 
   Bm1\FileNoindex\:
     resource: '../Classes/*'
+
+  # Middlewares are resolved through the container at request time
+  Bm1\FileNoindex\Middleware\RobotsTxtMiddleware:
+    public: true
