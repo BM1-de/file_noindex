@@ -21,9 +21,9 @@ ExtensionManagementUtility::addTCAcolumns('sys_file_metadata', [
     ],
 ]);
 
+// Own "SEO" tab at the end of every type - does not collide with other
+// extensions extending the metadata form and leaves room for future fields
 ExtensionManagementUtility::addToAllTCAtypes(
     'sys_file_metadata',
-    'tx_filenoindex_noindex',
-    '',
-    'after:alternative'
+    '--div--;LLL:EXT:file_noindex/Resources/Private/Language/locallang_db.xlf:sys_file_metadata.tab.seo,tx_filenoindex_noindex'
 );

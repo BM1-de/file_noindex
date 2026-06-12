@@ -2,6 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
 	<file source-language="en" datatype="plaintext" original="EXT:file_noindex/Resources/Private/Language/locallang_db.xlf" product-name="file_noindex">
 		<body>
+			<trans-unit id="sys_file_metadata.tab.seo" resname="sys_file_metadata.tab.seo">
+				<source>SEO</source>
+			</trans-unit>
 			<trans-unit id="sys_file_metadata.tx_filenoindex_noindex" resname="sys_file_metadata.tx_filenoindex_noindex">
 				<source>Do not index in search engines</source>
 			</trans-unit>

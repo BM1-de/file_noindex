@@ -41,9 +41,10 @@ database:updateschema`). No further configuration is needed.
 
 1. Open the **File list** module and edit the metadata of a file
    (or open the file resource in the Media module).
-2. Enable **"Do not index in search engines"** and save.
+2. Switch to the **SEO** tab, enable **"Do not index in search engines"**
+   and save.
 
-   ![The checkbox in the file metadata form](Resources/Public/Screenshots/checkbox-file-metadata.png)
+   ![The checkbox on the SEO tab of the file metadata form](Resources/Public/Screenshots/checkbox-file-metadata.png)
 3. `https://your-site.example/robots.txt` now contains the `Disallow`
    entries — immediately, no cache flush needed:
 
