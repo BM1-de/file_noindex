@@ -1,5 +1,8 @@
 # File No-Index — exclude single files from search engines
 
+[![CI](https://github.com/BM1-de/file_noindex/actions/workflows/ci.yml/badge.svg)](https://github.com/BM1-de/file_noindex/actions/workflows/ci.yml)
+[![TER](https://img.shields.io/badge/TER-file__noindex-orange)](https://extensions.typo3.org/extension/file_noindex)
+
 TYPO3 extension `file_noindex` · Composer `bm1/file-noindex` · TYPO3 v13 + v14 · GPL-2.0-or-later
 
 Editors can exclude **any file** (images of all kinds, PDFs, …) from search
