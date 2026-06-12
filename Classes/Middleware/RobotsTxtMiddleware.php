@@ -11,6 +11,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Psr\Log\LoggerInterface;
 use TYPO3\CMS\Core\Http\Stream;
 use TYPO3\CMS\Core\Site\Entity\Site;
 
@@ -34,6 +35,7 @@ final class RobotsTxtMiddleware implements MiddlewareInterface
         private readonly DisallowListBuilder $disallowListBuilder,
         private readonly RobotsTxtAmender $robotsTxtAmender,
         private readonly ResponseFactoryInterface $responseFactory,
+        private readonly LoggerInterface $logger,
     ) {}
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
@@ -44,9 +46,22 @@ final class RobotsTxtMiddleware implements MiddlewareInterface
             return $handler->handle($request);
         }
 
+        try {
+            $disallowPaths = $this->disallowListBuilder->build();
+        } catch (\Throwable $exception) {
+            // Never break robots.txt delivery: crawlers treat a 5xx robots.txt
+            // as "everything disallowed" for the whole site. This happens e.g.
+            // when the database schema update has not been run yet - serve the
+            // base rules without disallow entries instead.
+            $this->logger->error('Could not build the file disallow list for robots.txt', [
+                'exception' => $exception,
+            ]);
+            $disallowPaths = [];
+        }
+
         $content = $this->robotsTxtAmender->amend(
             $this->getBaseContent($request),
-            $this->disallowListBuilder->build()
+            $disallowPaths
         );
 
         $body = new Stream('php://temp', 'rw');
