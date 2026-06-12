@@ -68,7 +68,7 @@ class DisallowListBuilder
             }
             $processingFolderPath = $this->getProcessingFolderPublicPath($storage);
             if ($processingFolderPath !== null) {
-                foreach ($this->buildWildcardPatterns($processingFolderPath, $file->getNameWithoutExtension()) as $pattern) {
+                foreach ($this->buildWildcardPatterns($processingFolderPath, $this->getProcessedFileNameStem($file, $storage)) as $pattern) {
                     $paths[] = $pattern;
                 }
             }
@@ -147,6 +147,21 @@ class DisallowListBuilder
             ->executeQuery();
 
         return array_map(intval(...), array_column($result->fetchAllAssociative(), 'uid'));
+    }
+
+    /**
+     * Processed file names are built from the driver-sanitized original name
+     * (e.g. spaces become "_" in the LocalDriver), so the wildcard stem must
+     * be sanitized the same way to match future variants.
+     */
+    private function getProcessedFileNameStem(File $file, ResourceStorage $storage): string
+    {
+        $stem = $file->getNameWithoutExtension();
+        try {
+            return $storage->sanitizeFileName($stem);
+        } catch (\Exception) {
+            return $stem;
+        }
     }
 
     /**

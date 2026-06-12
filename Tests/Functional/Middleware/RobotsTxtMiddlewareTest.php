@@ -94,8 +94,11 @@ final class RobotsTxtMiddlewareTest extends FunctionalTestCase
     {
         $body = (string) $this->dispatch($this->createRobotsTxtRequest(withStaticTextRoute: true))->getBody();
 
+        // The original keeps its name (spaces encoded as %20) ...
         self::assertStringContainsString('Disallow: /fileadmin/test/T%C3%BCrme%20%C3%BCber%20Bayreuth.jpg', $body);
-        self::assertStringContainsString('Disallow: /fileadmin/_processed_/*/csm_T%C3%BCrme%20%C3%BCber%20Bayreuth_*', $body);
+        // ... while processed file names are driver-sanitized (spaces -> "_"),
+        // so the wildcards must use the sanitized stem to match them
+        self::assertStringContainsString('Disallow: /fileadmin/_processed_/*/csm_T%C3%BCrme_%C3%BCber_Bayreuth_*', $body);
         self::assertStringNotContainsString('Türme', $body);
     }
 
