@@ -121,7 +121,7 @@ composer check:cs
 composer check:phpstan
 ```
 
-Issues and source: <https://git.bm1.de/typo3/file_noindex>
+Issues and source: <https://github.com/BM1-de/file_noindex>
 
 ## License
 

@@ -12,10 +12,14 @@
         "FAL",
         "Google Image Search"
     ],
-    "homepage": "https://git.bm1.de/typo3/file_noindex",
+    "homepage": "https://github.com/BM1-de/file_noindex",
     "license": [
         "GPL-2.0-or-later"
     ],
+    "support": {
+        "issues": "https://github.com/BM1-de/file_noindex/issues",
+        "source": "https://github.com/BM1-de/file_noindex"
+    },
     "authors": [
         {
             "name": "Phillip Baumgärtner",
