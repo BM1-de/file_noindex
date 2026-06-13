@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- document -->
+  <path d="M16 7h17l11 11v33a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V11a4 4 0 0 1 4-4z" fill="#ffffff" stroke="#16202c" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M33 7v11h11" fill="#dfe4ea" stroke="#16202c" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- text lines -->
+  <g fill="#c2cad4">
+    <rect x="18" y="25" width="16" height="2.6" rx="1.3"/>
+    <rect x="18" y="31" width="20" height="2.6" rx="1.3"/>
+    <rect x="18" y="37" width="12" height="2.6" rx="1.3"/>
+  </g>
+  <!-- magnifier glass -->
+  <circle cx="42" cy="42" r="12.5" fill="#ffffff" stroke="#ff8700" stroke-width="4.4"/>
+  <line x1="51" y1="51" x2="60" y2="60" stroke="#ff8700" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- prohibition slash through the glass: "no search / no index" -->
+  <line x1="34.5" y1="49.5" x2="49.5" y2="34.5" stroke="#e3000f" stroke-width="4.4" stroke-linecap="round"/>
+</svg>

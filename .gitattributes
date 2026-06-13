@@ -3,6 +3,7 @@
 /.github export-ignore
 /.gitignore export-ignore
 /.php-cs-fixer.php export-ignore
+/Documentation export-ignore
 /Build export-ignore
 /Tests export-ignore
 /phpstan.neon export-ignore

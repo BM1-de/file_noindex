@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guides xmlns="https://www.phpdoc.org/guides"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.phpdoc.org/guides ../vendor/phpdocumentor/guides-cli/resources/schema/guides.xsd"
+        links-are-relative="true"
+        default-code-language="php">
+
+    <project title="File No-Index"
+             release="1.1.0"
+             version="main"
+             copyright="since 2026 by Baumgärtner Marketing GmbH and contributors"/>
+
+    <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
+               edit-on-github="BM1-de/file_noindex"
+               edit-on-github-branch="master"
+               edit-on-github-directory="Documentation"
+               interlink-shortcode="file_noindex"
+               project-home="https://extensions.typo3.org/extension/file_noindex"
+               project-repository="https://github.com/BM1-de/file_noindex"
+               project-issues="https://github.com/BM1-de/file_noindex/issues"
+               typo3-core-preferred="stable"/>
+
+</guides>
