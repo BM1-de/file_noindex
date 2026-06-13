@@ -18,7 +18,8 @@
     ],
     "support": {
         "issues": "https://github.com/BM1-de/file_noindex/issues",
-        "source": "https://github.com/BM1-de/file_noindex"
+        "source": "https://github.com/BM1-de/file_noindex",
+        "docs": "https://docs.typo3.org/p/bm1/file-noindex/main/en-us/"
     },
     "authors": [
         {

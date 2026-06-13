@@ -125,7 +125,8 @@ composer check:cs
 composer check:phpstan
 ```
 
-Issues and source: <https://github.com/BM1-de/file_noindex>
+- Documentation: <https://docs.typo3.org/p/bm1/file-noindex/main/en-us/>
+- Issues and source: <https://github.com/BM1-de/file_noindex>
 
 ## License
 
