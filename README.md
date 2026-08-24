@@ -4,7 +4,7 @@
 [![Packagist](https://img.shields.io/packagist/v/bm1/file-noindex)](https://packagist.org/packages/bm1/file-noindex)
 [![TER](https://img.shields.io/badge/TER-file__noindex-orange)](https://extensions.typo3.org/extension/file_noindex)
 
-TYPO3 extension `file_noindex` · Composer `bm1/file-noindex` · TYPO3 v13 + v14 · GPL-2.0-or-later
+TYPO3 extension `file_noindex` · Composer `bm1/file-noindex` · TYPO3 v12 + v13 + v14 · GPL-2.0-or-later
 
 Editors can exclude **any file** (images of all kinds, PDFs, …) from search
 engine indexing directly in the **File list** module — one checkbox in the

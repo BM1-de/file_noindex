@@ -29,6 +29,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          - { php: '8.1', typo3: '^12.4' }
+          - { php: '8.2', typo3: '^12.4' }
+          - { php: '8.3', typo3: '^12.4' }
           - { php: '8.2', typo3: '^13.4' }
           - { php: '8.3', typo3: '^13.4' }
           - { php: '8.4', typo3: '^13.4' }
@@ -47,6 +50,10 @@ jobs:
           path: ~/.cache/composer
           key: composer-${{ matrix.php }}-${{ matrix.typo3 }}-${{ hashFiles('composer.json') }}
       - run: composer require "typo3/cms-core:${{ matrix.typo3 }}" --no-update --no-interaction
+      # TYPO3 v12 has left free support: every public 12.4.x release carries
+      # security advisories, which composer refuses to install by default.
+      - if: startsWith(matrix.typo3, '^12')
+        run: composer config policy.advisories.block false
       - run: composer update --no-interaction --no-progress
       - run: composer show typo3/cms-core | grep ^versions
       - run: composer test:unit
